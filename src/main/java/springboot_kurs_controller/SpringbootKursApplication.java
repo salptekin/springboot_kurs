@@ -1,4 +1,4 @@
-package com.techpro.springboot_kurs;
+package springboot_kurs_controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

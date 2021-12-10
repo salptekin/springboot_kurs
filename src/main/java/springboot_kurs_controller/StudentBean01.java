@@ -1,9 +1,9 @@
-package com.techpro.springboot_kurs;
+package springboot_kurs_controller;
 
 import org.springframework.stereotype.Component;
 
 @Component //@Component kullandiginiz class'dan obje olusturulur ve IOC Container'in icine konur 
-           //new StudentBean01(); gibi fonksiyonu var
+           //new StudentBean03(); gibi fonksiyonu var
 public class StudentBean01 implements StudentInterface{//Bean: IOC Container'in icinde SpringBoot'un olusturdugu objelere "Bean" denir
 
 	private String name;
@@ -41,11 +41,11 @@ public class StudentBean01 implements StudentInterface{//Bean: IOC Container'in 
 	
 	@Override
 	public String toString() {
-		return "StudentBean01: name=" + name + ", age=" + age + ", id=" + id;
+		return "StudentBean03: name=" + name + ", age=" + age + ", id=" + id;
 	}
 
 	@Override
 	public String study() {
-		return "StudentBean01 class'indan geliyorum....";
+		return "StudentBean03 class'indan geliyorum....";
 	}
 }

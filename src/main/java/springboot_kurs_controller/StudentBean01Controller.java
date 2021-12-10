@@ -1,4 +1,4 @@
-package com.techpro.springboot_kurs;
+package springboot_kurs_controller;
 
 import java.util.List;
 
@@ -35,7 +35,7 @@ public class StudentBean01Controller {
 
 	//Loose Coupling
 	@Autowired//@Autowired annotation'i IOC Container'dan objeyi alir ve
-	          // "s" container'inin icine koyar. StudentBean01 s = new StudentBean01() deki "=" operatorune benzer
+	          // "s" container'inin icine koyar. StudentBean03 s = new StudentBean03() deki "=" operatorune benzer
 	StudentBean01 s;
 	
 	@GetMapping(path="/getObjectLoose")
