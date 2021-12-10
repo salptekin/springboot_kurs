@@ -1,31 +1,29 @@
-package springboot_kurs_controller_service;
+package springboot_kurs_controller_service_repository_form_based_authentication;
 
 import java.time.LocalDate;
 import java.time.Period;
 
-import org.springframework.stereotype.Component;
-
-@Component
-public class StudentBean03{
-
+public class StudentBean04 {
+	
 	private Long id;
 	private String name;
 	private String email;
 	private LocalDate dob;
 	private Integer age;
-
 	private String errMsg;
 	
-	public StudentBean03(Long id, String name, String email, LocalDate dob) {
+	public StudentBean04() {
+		this.errMsg = "There is no any student like that...";
+		this.age = getAge();
+	}
+
+	public StudentBean04(Long id, String name, String email, LocalDate dob) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.dob = dob;
+		this.age = getAge();
 		this.errMsg = "No error...";
-	}
-	
-	public StudentBean03() {
-		this.errMsg = "There is no any students like that...";
 	}
 
 	public Long getId() {
@@ -70,6 +68,8 @@ public class StudentBean03{
 
 	@Override
 	public String toString() {
-		return "id=" + id + ", name=" + name + ", email=" + email + ", dob=" + dob + ", age=" + age;
+		return "StudentBean05 [id=" + id + ", name=" + name + ", email=" + email + ", dob=" + dob + ", age=" + age
+				+ ", errMsg=" + errMsg + "]";
 	}
+
 }
