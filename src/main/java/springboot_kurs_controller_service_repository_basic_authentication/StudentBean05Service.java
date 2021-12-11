@@ -52,6 +52,14 @@ public class StudentBean05Service {
 			existingStudentById.setName(newStudent.getName());
 		}
 		
+		//Student email degistirilecek
+		
+		
+		//Student dob degistirilecek
+		
+		
+		//Error message degistirilecek
+		
 		return studentRepo.save(existingStudentById);
 		
 	}
