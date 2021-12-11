@@ -26,6 +26,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.
+			csrf().disable().
 			authorizeRequests().
 			antMatchers("/", "index", "/css/*", "/js/*").permitAll().
 			anyRequest().
@@ -45,18 +46,4 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter{
 		return new InMemoryUserDetailsManager(student, admin);
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
 }
