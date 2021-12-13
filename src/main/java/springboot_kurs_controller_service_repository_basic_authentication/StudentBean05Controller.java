@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -44,19 +45,19 @@ public class StudentBean05Controller {
 	
 	@PutMapping(path="/updateFullyById/{id}")
 	@PreAuthorize("hasAuthority('student:write')")
-	public StudentBean05 updateFullyById(@PathVariable Long id, @RequestBody StudentBean05 newStudent) {		
+	public StudentBean05 updateFullyById(@PathVariable Long id, @Validated @RequestBody StudentBean05 newStudent) {		
 		return studentBean05Service.updateStudentFully(id, newStudent);		
 	}
 	
 	@PatchMapping(path="/updatePartiallyById/{id}")
 	@PreAuthorize("hasAuthority('student:write')")
-	public StudentBean05 updatePartiallyById(@PathVariable Long id, @RequestBody StudentBean05 newStudent) {		
+	public StudentBean05 updatePartiallyById(@PathVariable Long id, @Validated @RequestBody StudentBean05 newStudent) {		
 		return studentBean05Service.updateStudentPartially(id, newStudent);		
 	}
 	
 	@PostMapping(path="/addNewStudent")
 	@PreAuthorize("hasAuthority('student:write')")
-	public StudentBean05 addNewStudent(@RequestBody StudentBean05 newStudent) throws ClassNotFoundException, SQLException {		
+	public StudentBean05 addNewStudent(@Validated @RequestBody StudentBean05 newStudent) throws ClassNotFoundException, SQLException {		
 		return studentBean05Service.addNewStudent(newStudent);	
 	}
 
